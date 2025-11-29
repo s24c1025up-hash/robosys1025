@@ -67,5 +67,5 @@ $ cat data.txt | ./bmi > result.txt
 - © 2025 [Ryuse Oshiba]
 
 ## 謝辞
-- このパッケージのディレクトリ構成やテスト方法は、千葉工業大学 ロボットシステム学(2025)の講義資料を参考にしています。
+- このディレクトリ構成は、千葉工業大学 ロボットシステム学(2025)の講義資料を参考にしています。
     - [ryuichiueda/slides_marp/robosys2025](https://github.com/ryuichiueda/slides_marp/tree/master/robosys2025)
