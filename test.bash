@@ -1,14 +1,18 @@
-#!/bin/bash -xv
-           ### 省略しますが、ここに前回学んだ著作権やライセンスの設定を！！
- ng () {
-         echo ${1}行目が違うよ
-         res=1
- }
+#!/bin/bash
+# SPDX-FileCopyrightText: 2025 YOUR NAME
+# SPDX-License-Identifier: BSD-3-Clause
 
- res=0    
+test_input="170 60"
+expected="20.76"
 
-out=$(seq 5 | ./plus)
-[ "${out}" = 15 ] || ng "$LINENO"
- 
-[ "${res}" = 0 ] && echo OK #通ったのが（人間に）分かるように表示
- exit $res
+out=$(echo "$test_input" | ./bmi)
+
+if [ "$out" = "$expected" ]; then
+    echo "OK"
+    exit 0
+else
+    echo "NG"
+    echo "Expected: $expected"
+    echo "Got: $out"
+    exit 1
+fi
