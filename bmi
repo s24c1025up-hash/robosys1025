@@ -1,0 +1,41 @@
+#!/usr/bin/env python3
+# SPDX-FileCopyrightText: 2025 YOUR NAME <YOUR_EMAIL_OR_ID>
+# SPDX-License-Identifier: BSD-3-Clause
+
+import sys
+
+def main():
+    try:
+        for line in sys.stdin:
+            line = line.strip()
+            if not line:
+                continue
+
+            parts = line.split()
+            
+            if len(parts) >= 2:
+                try:
+                    height_cm = float(parts[0])
+                    weight_kg = float(parts[1])
+
+                    if height_cm <= 0:
+                        continue
+
+                    height_m = height_cm / 100
+                    bmi = weight_kg / (height_m ** 2)
+
+                    print(f"{bmi:.2f}")
+
+                except ValueError:
+                    pass
+            else:
+                pass
+
+    except BrokenPipeError:
+        sys.exit(1)
+    except Exception as e:
+        sys.stderr.write(str(e) + "\n")
+        sys.exit(1)
+
+if __name__ == '__main__':
+    main()
