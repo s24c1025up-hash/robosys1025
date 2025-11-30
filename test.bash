@@ -1,5 +1,5 @@
 #!/bin/bash
-# SPDX-FileCopyrightText: 2025 YOUR NAME
+# SPDX-FileCopyrightText: 2025 Ryuse Oshiba
 # SPDX-License-Identifier: BSD-3-Clause
 
 test_input="170 60"
